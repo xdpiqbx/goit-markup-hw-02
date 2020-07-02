@@ -1,14 +1,49 @@
 :root{
-    --main-font-color: #212121;
-    --main-hover-color: #2196F3;
     --main-font-family: 'Roboto', sans-serif;
     --logo-font-family: 'Raleway', sans-serif;
+    
+    --white: #ffffff;
+    --main-font-color: #212121;
+    --main-hover-color: #2196F3;
+    --portfolio-type-font-color: #757575;
+    --what-we-do-h3-background: rgba(47, 48, 58, 0.8);
+
     --button-background: #F5F4FA;
 }
 
+
 body{
+    max-width: 1170px;
+    margin: 0 auto;
     font-family: var(--main-font-family);
     color: var(--main-font-color);
+}
+
+ul{
+    padding-left: 0;
+}
+
+header{
+    line-height: 80px;
+    vertical-align: middle;
+}
+
+nav, .top-nav-ul, .contact{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+.top-nav-ul li, .contact li{
+    display: inline-block;
+}
+
+.contact{
+    letter-spacing: 0.02em;    
+} 
+
+.hero{
+    text-align: center;
 }
 
 .hero h1{
@@ -39,8 +74,63 @@ body{
     color: var(--button-background);
 }
 
+.benefits ul{
+    text-align: center;
+}
+
+.benefits-list li{
+    width: 270px;
+    display: inline-block;
+    text-align: left;
+}
+
+.benefits-list div{
+    text-align: center;
+    background-color: #F5F4FA;
+    border-radius: 4px;
+    line-height: 120px;
+}
+
+.benefits-list div img{
+    vertical-align: middle;
+}
+
+.hidden-header-h{
+    margin: 0px;
+    padding: 0px;
+    line-height: 0px;
+    font-size: 0;
+}
+
 ul{
     list-style-type: none;
+}
+
+.what-we-do{
+    text-align: center;
+}
+
+.what-we-do li{
+    width: 370px;
+    display: inline-block;
+}
+
+.what-we-do h3{
+    background-color: var(--what-we-do-h3-background);
+    line-height: 70px;
+    margin: 0;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+.what-we-do a{
+    color: var(--white);
+    text-decoration: none;
 }
 
 .logo{
@@ -55,18 +145,27 @@ ul{
     color: var(--main-hover-color);
 }
 
-.top-nav a, .contact a, address, address a{
+.top-nav-ul a, .contact a, address, address a{
     font-weight: 700;
     color: var(--main-font-color);
     text-decoration: none;
     font-size: 14px;
 }
 
-.top-nav a:hover, .contact a:hover, address a:hover{
+.top-nav-ul .active-page, .top-nav-ul a:hover, .contact a:hover, address a:hover{
     color: var(--main-hover-color);
 }
 
+.btn-group{
+    text-align: center;
+}
+
+.btn-group li{
+    display: inline-block;
+}
+
 .btn-group button{
+    margin-bottom: 2px;
     line-height: 26px;
     background-color: var(--button-background);
     font-family: var(--main-font-family);
@@ -74,7 +173,7 @@ ul{
     border-style: none;
     font-weight: 700;
     padding: 6px 22px 6px 22px;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.05em;
 }
 
 .btn-group button:hover{
@@ -82,9 +181,26 @@ ul{
     color: var(--button-background);
 }
 
-.portfolio li{
-    border: 1px solid #EEEEEE;
+.portfolio{
+    text-align: center;
 }
+
+.portfolio li{
+    display: inline-block;
+    width: 370px;
+    border: 1px solid #EEEEEE;
+    box-sizing: border-box;
+    margin-bottom: 4px;
+    /*наверно grid*/
+}
+
+.portfolio li:hover{
+    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
+}
+
+.portfolio li h2, .portfolio li p{
+    text-align: left;
+} 
 
 .portfolio a{
     text-decoration: none;
@@ -94,6 +210,75 @@ ul{
     width: 370px;
 }
 
+.portfolio a h2{
+    color: var(--main-font-color);
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 36px;
+    letter-spacing: 0.06em;
+}
+
+.portfolio p{
+    color: var(--portfolio-type-font-color);
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 30px;
+    /* identical to box height, or 187% */
+    letter-spacing: 0.03em;
+}
+
+.our-team{
+    background-color:#F5F4FA;
+    text-align: center;
+}
+
+.our-team-member{
+    display: inline-block;
+    margin-bottom: 4px;
+    background-color:#FFFFFF;
+    width: 270px;
+    border-radius: 0px 0px 4px 4px;
+    text-align: center;
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+    border-radius: 0px 0px 4px 4px;
+}
+
+.our-team .social{
+    margin-top: 16px;
+    padding-left: 0px;
+}
+
+.our-team .social li{
+    display: inline-block;
+    line-height: 44px;
+}
+
+.clients{
+    text-align: center;
+}
+.clients li{
+    display: inline-block;
+}
+
+.clients div{
+    display: inline-block;
+    width: 170px;
+    line-height: 90px;
+}
+
 address{
     font-style: normal;
+}
+
+footer div{
+    display: inline-block;
+    margin-right: 50px;
+}
+
+.join li{
+    display: inline-block;
 }

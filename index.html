@@ -10,10 +10,10 @@
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="top">
             <a class="logo" href="./index.html" aria-label="Главная страница"><span>Web</span> Studio</a>
-            <ul class="top-nav">
-                <li><a href="#">Студия</a></li>
+            <ul class="top-nav-ul">
+                <li><a class="active-page" href="#">Студия</a></li>
                 <li><a href="./portfolio.html">Портфолио</a></li>
                 <li><a href="#">Конткты</a></li> 
            </ul>
@@ -28,26 +28,27 @@
             <h1>Эффективные решения <br> для вашего бизнеса</h1>
             <button>Заказать услугу</button>
         </section>
-        <section>
-            <ul>
+        <section class="benefits">
+            <h2 class="hidden-header-h">Наши преимущества</h2>
+            <ul class="benefits-list">
                 <li>
-                    <img src="./images/antenna.svg" alt="Иконка антенны">
-                    <h2>Внимание к деталям</h2>
+                    <div><img src="./images/antenna.svg" alt="Иконка антенны"></div>
+                    <h3>Внимание к деталям</h3>
                     <p>Идейные соображения, а также начало повседневной работы по формированию позиции.</p>
                 </li>
                 <li>
-                    <img src="./images/clock.svg" alt="Иконка часов">
-                    <h2>Пунктуальность</h2>
+                    <div><img src="./images/clock.svg" alt="Иконка часов"></div>
+                    <h3>Пунктуальность</h3>
                     <p>Задача организации, в особенности же рамки и место обучения кадров влечет за собой.</p>
                 </li>
                 <li>
-                    <img src="./images/diagram.svg" alt="Иконка диаграмы">
-                    <h2>Планирование</h2>
+                    <div><img src="./images/diagram.svg" alt="Иконка диаграмы"></div>
+                    <h3>Планирование</h3>
                     <p>Равным образом консультация с широким активом в значительной степени обуславливает.</p>
                 </li>
                 <li>
-                    <img src="./images/astronaut.svg" alt="Иконка астронавт">
-                    <h2>Современные технологии</h2>
+                    <div><img src="./images/astronaut.svg" alt="Иконка астронавт"></div>
+                    <h3>Современные технологии</h3>
                     <p>Значимость этих проблем настолько очевидна, что реализация плановых заданий.</p>
                 </li>
             </ul>
@@ -57,22 +58,22 @@
             <ul>
                 <li>
                     <img src="./images/what-we-do/notebook.jpg" alt="Ноутбук">
-                    <h3><a href="#">Десктопные приложения</a></h3>
+                    <a href="#"><h3>Десктопные приложения</h3></a>
                 </li>
                 <li>
                     <img src="./images/what-we-do/smart.jpg" alt="Смартфон">
-                    <h3><a href="#">Мобильные приложения</a></h3>
+                    <a href="#"><h3>Мобильные приложения</h3></a>
                 </li>
                 <li>
                     <img src="./images/what-we-do/mac.jpg" alt="Компьютер">
-                    <h3><a href="#">Дизайнерские решения</a></h3>
+                    <a href="#"><h3>Дизайнерские решения</h3></a>
                 </li>
             </ul>
         </section>
         <section class="our-team">
             <h2>Наша команда</h2>
             <ul>
-                <li>
+                <li class="our-team-member">
                     <img src="./images/team/nikolai.jpg" alt="Фото Николая">
                     <h3>Николай Кучеренко</h3>
                     <b>Product Designer</b>
@@ -83,7 +84,7 @@
                         <li><a href="#"><img src="./images/linkedinico.svg" alt="Linkedin"></a></li>
                     </ul>
                 </li>
-                <li>
+                <li class="our-team-member">
                     <img src="./images/team/olga.jpg" alt="Фото Ольги">
                     <h3>Ольга Иванова</h3>
                     <b>Frontend Developer</b>
@@ -94,7 +95,7 @@
                         <li><a href="#"><img src="./images/linkedinico.svg" alt="Linkedin"></a></li>
                     </ul>
                 </li>
-                <li>
+                <li class="our-team-member">
                     <img src="./images/team/andrei.jpg" alt="Фото Андрея">
                     <h3>Андрей Шевченко</h3>
                     <b>Marketingr</b>
@@ -105,7 +106,7 @@
                         <li><a href="#"><img src="./images/linkedinico.svg" alt="Linkedin"></a></li>
                     </ul>
                 </li>
-                <li>
+                <li class="our-team-member">
                     <img src="./images/team/ivan.jpg" alt="Фото Ивана">
                     <h3>Иван Николаев</h3>
                     <b>UI Designer</b>
@@ -121,12 +122,12 @@
         <section class="clients">
             <h2>Постоянные клиенты</h2>
             <ul>
-                <li><a href="#"><img src="./images/clients/client1.svg" alt="Лого Клиента 1"></a></li>
-                <li><a href="#"><img src="./images/clients/client2.svg" alt="Лого Клиента 2"></a></li>
-                <li><a href="#"><img src="./images/clients/client3.svg" alt="Лого Клиента 3"></a></li>
-                <li><a href="#"><img src="./images/clients/client4.svg" alt="Лого Клиента 4"></a></li>
-                <li><a href="#"><img src="./images/clients/client5.svg" alt="Лого Клиента 5"></a></li>
-                <li><a href="#"><img src="./images/clients/client6.svg" alt="Лого Клиента 6"></a></li>
+                <div><li><a href="#"><img src="./images/clients/client1.svg" alt="Лого Клиента 1"></a></li></div>
+                <div><li><a href="#"><img src="./images/clients/client2.svg" alt="Лого Клиента 2"></a></li></div>
+                <div><li><a href="#"><img src="./images/clients/client3.svg" alt="Лого Клиента 3"></a></li></div>
+                <div><li><a href="#"><img src="./images/clients/client4.svg" alt="Лого Клиента 4"></a></li></div>
+                <div><li><a href="#"><img src="./images/clients/client5.svg" alt="Лого Клиента 5"></a></li></div>
+                <div><li><a href="#"><img src="./images/clients/client6.svg" alt="Лого Клиента 6"></a></li></div>
             </ul>
         </section>
     </main>
@@ -141,7 +142,7 @@
                 </ul>
             </address>
         </div>
-        <div>
+        <div class="join">
             <b>ПРИСОЕДИНЯЙТЕСЬ</b>
             <ul>
                 <li><a href="#"><img src="./images/instagramico.svg" alt="Instagram"></a></li>
@@ -149,6 +150,9 @@
                 <li><a href="#"><img src="./images/facebookico.svg" alt="Facebook"></a></li>
                 <li><a href="#"><img src="./images/linkedinico.svg" alt="Linkedin"></a></li>
             </ul>
+        </div>
+        <div class="subscribe">
+            <b>ПОДПИШИТЕСЬ НА РАССЫЛКУ</b>
         </div>
     </footer>
 </body>
