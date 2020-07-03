@@ -7,13 +7,12 @@
     --main-hover-color: #2196F3;
     --portfolio-type-font-color: #757575;
     --what-we-do-h3-background: rgba(47, 48, 58, 0.8);
-
+    --footer-bg: #2F303A;
     --button-background: #F5F4FA;
+    --max-width: 1250px;
 }
 
 body{
-    max-width: 1170px;
-    margin: 0 auto;
     font-family: var(--main-font-family);
     color: var(--main-font-color);
 }
@@ -35,61 +34,116 @@ ul{
 li{
     display: inline-block;
 }
-/*only in footer list ============================================= */
-address ul li{
-    display: block;
-}
-
 /* Header and Footer ============================================= */
 header{
     height: 80px;
     vertical-align: middle;
+    margin-bottom: 93px;
+    border: 1px solid #ECECEC;
+}
+    .wrapper-in-header{
+        margin:0 auto;
+        max-width: var(--max-width);
+        display: inherit;
+    }
+        .logo{
+            font-family: var(--logo-font-family);
+            font-size: 26px;
+            color: var(--main-font-color);
+            text-decoration: none;
+        }
+
+            .logo span{
+                color: var(--main-hover-color);
+            }
+
+    nav, .top-nav-ul, .contact{
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        line-height: 80px;
+    }
+
+    
+    .top-nav-ul a, .contact a, address, address a{
+        font-weight: 700;
+        color: var(--main-font-color);
+        font-size: 14px;
+    }
+    
+    .top-nav-ul .active-page, .top-nav-ul a:hover, .contact a:hover, address a:hover{
+        color: var(--main-hover-color);
+    }
+    
+    .addres-header, .contact{
+        letter-spacing: 0.02em;
+        display: inline-block;
+    } 
+
+footer{
+    background-color: var(--footer-bg);
+    color: var(--white);
+    padding: 60px;
+    margin-top: 93px;
 }
 
-.logo{
-    font-family: var(--logo-font-family);
-    font-size: 26px;
-    line-height: 31px;
-    color: var(--main-font-color);
-    text-decoration: none;
+.wrapper-in-footer{
+    margin:0 auto;
+    max-width: var(--max-width);
+    display: inherit;
 }
 
-.logo span{
-    color: var(--main-hover-color);
-}
-
-nav, .top-nav-ul, .contact{
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-    line-height: 80px;
-}
-
-.contact{
-    letter-spacing: 0.02em;
-    float: right;
-} 
-
-.top-nav-ul a, .contact a, address, address a{
-    font-weight: 700;
-    color: var(--main-font-color);
-    font-size: 14px;
-}
-
-.top-nav-ul .active-page, .top-nav-ul a:hover, .contact a:hover, address a:hover{
-    color: var(--main-hover-color);
+footer .logo{
+    color: var(--white);
 }
 
 footer div{
     display: inline-block;
-    margin-right: 50px;
+    vertical-align: top;
+    margin-right: 70px;
+}
+
+.addres-footer ul{
+    margin-top: 20px;
+}
+
+.addres-footer ul li{
+    display: block;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: var(--white);
+    margin-bottom: 9px;
+}
+
+.addres-footer ul li a{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.join ul{
+    margin-top: 20px;
+}
+
+.join li{
+    margin-right: 10px;
 }
 /*Main element ===================== index.html ========================*/
 .hero{
     text-align: center;
+    height: 600px;
+    background-color: rgba(47, 48, 58, 0.8);
 }
-
     .hero h1{
+        color:var(--white);
         font-family: Roboto;
         font-style: normal;
         font-weight: 900;
@@ -102,8 +156,9 @@ footer div{
 
     .hero button{
         line-height: 30px;
-        background-color: var(--button-background);
+        background-color: var(--main-hover-color);
         font-family: var(--main-font-family);
+        color: var(--button-background);
         font-size: 16px;
         border-radius: 4px;
         border-style: none;
@@ -112,11 +167,10 @@ footer div{
         letter-spacing: 0.06em;
     }
 
-        .hero button:hover{
-            background-color: var(--main-hover-color);
-            color: var(--button-background);
-        }
-
+.wrapper-main-content{
+    margin: 0 auto;
+    max-width: var(--max-width);
+}
 /*in section benefits ===================== index.html ========================*/
 .hidden-header-h{
     margin: 0px;
@@ -129,21 +183,22 @@ footer div{
     text-align: center;
 }
 
-.benefits-list li{
-    width: 270px;
-    text-align: left;
-}
+    .benefits-list li{
+        width: 270px;
+        text-align: left;
+        margin-right: 30px;
+    }
 
-.benefits-list div{
-    text-align: center;
-    background-color: #F5F4FA;
-    border-radius: 4px;
-    line-height: 120px;
-}
+        .benefits-list div{
+            text-align: center;
+            background-color: #F5F4FA;
+            border-radius: 4px;
+            line-height: 120px;
+        }
 
-.benefits-list div img{
-    vertical-align: middle;
-}
+            .benefits-list div img{
+                vertical-align: middle;
+            }
 
 /*in section what-we-do ===================== index.html ========================*/
 .what-we-do{
@@ -152,27 +207,79 @@ footer div{
 
     .what-we-do li{
         width: 370px;
+        margin-right: 30px;
     }
 
-    .what-we-do a{
-        color: var(--white);
-    }
+        .what-we-do a{
+            color: var(--white);
+        }
 
-    .what-we-do h3{
-        background-color: var(--what-we-do-h3-background);
-        line-height: 70px;
-        margin: 0;
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 14px;
+            .what-we-do h3{
+                background-color: var(--what-we-do-h3-background);
+                line-height: 70px;
+                margin: 0;
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                text-align: center;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+            }
+/*in section our-team ===================== index.html ========================*/
+.our-team{
+    background-color:#F5F4FA;
+    text-align: center;
+    padding-bottom: 94px;
+}
+    .our-team > ul{
+        margin-top: 50px;
+    }
+        .our-team-member{
+            margin-right: 30px;
+        }
+
+    .our-team-member{
+        display: inline-block;
+        margin-bottom: 4px;
+        background-color:#FFFFFF;
+        width: 270px;
+        border-radius: 0px 0px 4px 4px;
         text-align: center;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
+        box-shadow: 
+            0px 2px 1px rgba(0, 0, 0, 0.2),
+            0px 1px 1px rgba(0, 0, 0, 0.14),
+            0px 1px 3px rgba(0, 0, 0, 0.12);
+        border-radius: 0px 0px 4px 4px;
     }
+
+        .social{
+            margin-top: 16px;
+            padding-left: 0px;
+        }
+
+            .social li{
+                line-height: 44px;
+            }
+/*in section clients ===================== index.html ========================*/
+.clients{
+    text-align: center;
+}
+
+    .clients div{
+        display: inline-block;
+        width: 170px;
+        line-height: 90px;
+    }
+
+        .clients li{
+            display: inline-block;
+        }
+
 
 .btn-group{
     text-align: center;
+    margin-bottom: 50px;
 }
 
 .btn-group button{
@@ -201,8 +308,13 @@ footer div{
     width: 370px;
     border: 1px solid #EEEEEE;
     box-sizing: border-box;
-    margin-bottom: 4px;
-    /*наверно grid*/
+    margin-bottom: 30px;
+    margin-right: 30px;
+}
+
+.portfolio li h2,
+.portfolio li p{
+    padding-left: 24px;
 }
 
 .portfolio li:hover{
@@ -243,43 +355,4 @@ footer div{
     line-height: 30px;
     /* identical to box height, or 187% */
     letter-spacing: 0.03em;
-}
-
-.our-team{
-    background-color:#F5F4FA;
-    text-align: center;
-}
-
-.our-team-member{
-    display: inline-block;
-    margin-bottom: 4px;
-    background-color:#FFFFFF;
-    width: 270px;
-    border-radius: 0px 0px 4px 4px;
-    text-align: center;
-    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
-    border-radius: 0px 0px 4px 4px;
-}
-
-.our-team .social{
-    margin-top: 16px;
-    padding-left: 0px;
-}
-
-.our-team .social li{
-    display: inline-block;
-    line-height: 44px;
-}
-
-.clients{
-    text-align: center;
-}
-.clients li{
-    display: inline-block;
-}
-
-.clients div{
-    display: inline-block;
-    width: 170px;
-    line-height: 90px;
 }
