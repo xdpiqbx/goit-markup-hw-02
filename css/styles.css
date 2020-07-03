@@ -11,7 +11,6 @@
     --button-background: #F5F4FA;
 }
 
-
 body{
     max-width: 1170px;
     margin: 0 auto;
@@ -19,118 +18,32 @@ body{
     color: var(--main-font-color);
 }
 
+/* some reset ============================================= */
+a{
+    text-decoration: none;
+}
+
+address{
+    font-style: normal;
+}
+
 ul{
     padding-left: 0;
-}
-
-header{
-    line-height: 80px;
-    vertical-align: middle;
-}
-
-nav, .top-nav-ul, .contact{
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-}
-
-.top-nav-ul li, .contact li{
-    display: inline-block;
-}
-
-.contact{
-    letter-spacing: 0.02em;    
-} 
-
-.hero{
-    text-align: center;
-}
-
-.hero h1{
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 44px;
-    line-height: 60px;
-    text-align: center;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-}
-
-.hero button{
-    line-height: 30px;
-    background-color: var(--button-background);
-    font-family: var(--main-font-family);
-    font-size: 16px;
-    border-radius: 4px;
-    border-style: none;
-    font-weight: 700;
-    padding: 10px 32px 10px 32px;
-    letter-spacing: 0.06em;
-}
-
-.hero button:hover{
-    background-color: var(--main-hover-color);
-    color: var(--button-background);
-}
-
-.benefits ul{
-    text-align: center;
-}
-
-.benefits-list li{
-    width: 270px;
-    display: inline-block;
-    text-align: left;
-}
-
-.benefits-list div{
-    text-align: center;
-    background-color: #F5F4FA;
-    border-radius: 4px;
-    line-height: 120px;
-}
-
-.benefits-list div img{
-    vertical-align: middle;
-}
-
-.hidden-header-h{
-    margin: 0px;
-    padding: 0px;
-    line-height: 0px;
-    font-size: 0;
-}
-
-ul{
     list-style-type: none;
 }
 
-.what-we-do{
-    text-align: center;
-}
-
-.what-we-do li{
-    width: 370px;
+li{
     display: inline-block;
 }
-
-.what-we-do h3{
-    background-color: var(--what-we-do-h3-background);
-    line-height: 70px;
-    margin: 0;
-    
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    text-align: center;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+/*only in footer list ============================================= */
+address ul li{
+    display: block;
 }
-.what-we-do a{
-    color: var(--white);
-    text-decoration: none;
+
+/* Header and Footer ============================================= */
+header{
+    height: 80px;
+    vertical-align: middle;
 }
 
 .logo{
@@ -145,10 +58,21 @@ ul{
     color: var(--main-hover-color);
 }
 
+nav, .top-nav-ul, .contact{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    line-height: 80px;
+}
+
+.contact{
+    letter-spacing: 0.02em;
+    float: right;
+} 
+
 .top-nav-ul a, .contact a, address, address a{
     font-weight: 700;
     color: var(--main-font-color);
-    text-decoration: none;
     font-size: 14px;
 }
 
@@ -156,12 +80,99 @@ ul{
     color: var(--main-hover-color);
 }
 
-.btn-group{
+footer div{
+    display: inline-block;
+    margin-right: 50px;
+}
+/*Main element ===================== index.html ========================*/
+.hero{
     text-align: center;
 }
 
-.btn-group li{
-    display: inline-block;
+    .hero h1{
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 44px;
+        line-height: 60px;
+        text-align: center;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+    }
+
+    .hero button{
+        line-height: 30px;
+        background-color: var(--button-background);
+        font-family: var(--main-font-family);
+        font-size: 16px;
+        border-radius: 4px;
+        border-style: none;
+        font-weight: 700;
+        padding: 10px 32px 10px 32px;
+        letter-spacing: 0.06em;
+    }
+
+        .hero button:hover{
+            background-color: var(--main-hover-color);
+            color: var(--button-background);
+        }
+
+/*in section benefits ===================== index.html ========================*/
+.hidden-header-h{
+    margin: 0px;
+    padding: 0px;
+    line-height: 0px;
+    font-size: 0;
+}
+
+.benefits-list{
+    text-align: center;
+}
+
+.benefits-list li{
+    width: 270px;
+    text-align: left;
+}
+
+.benefits-list div{
+    text-align: center;
+    background-color: #F5F4FA;
+    border-radius: 4px;
+    line-height: 120px;
+}
+
+.benefits-list div img{
+    vertical-align: middle;
+}
+
+/*in section what-we-do ===================== index.html ========================*/
+.what-we-do{
+    text-align: center;
+}
+
+    .what-we-do li{
+        width: 370px;
+    }
+
+    .what-we-do a{
+        color: var(--white);
+    }
+
+    .what-we-do h3{
+        background-color: var(--what-we-do-h3-background);
+        line-height: 70px;
+        margin: 0;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        text-align: center;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+    }
+
+.btn-group{
+    text-align: center;
 }
 
 .btn-group button{
@@ -195,7 +206,10 @@ ul{
 }
 
 .portfolio li:hover{
-    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
+    box-shadow: 1px 4px 6px
+    rgba(0, 0, 0, 0.16), 0px 4px 4px
+    rgba(0, 0, 0, 0.06), 0px 1px 1px
+    rgba(0, 0, 0, 0.12);
 }
 
 .portfolio li h2, .portfolio li p{
@@ -268,17 +282,4 @@ ul{
     display: inline-block;
     width: 170px;
     line-height: 90px;
-}
-
-address{
-    font-style: normal;
-}
-
-footer div{
-    display: inline-block;
-    margin-right: 50px;
-}
-
-.join li{
-    display: inline-block;
 }
