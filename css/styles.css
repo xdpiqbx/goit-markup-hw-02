@@ -5,6 +5,7 @@
     --main-font-color: #212121;
     --main-font-on-dark-fon-color: #ffffff;
     --secondary-font-color: #757575;
+    --address-footer-a-color: rgba(255, 255, 255, 0.6);
 
     --secondary-bg-color: #F5F4FA;
     --member-card-bg-color: #ffffff;
@@ -28,9 +29,7 @@ html {
 }
     *,
     *::before,
-    *::after {
-        box-sizing: inherit;
-    }
+    *::after { box-sizing: inherit; }
 
 
 
@@ -44,133 +43,139 @@ body{
 
 
 /* some reset ===================================================================== */
-a{
-    text-decoration: none;
-}
+a{ text-decoration: none; }
 
-address{
-    font-style: normal;
-}
+address{ font-style: normal; }
 
 ul{
-    padding-left: 0;
     margin: 0;
+    padding-left: 0;
     list-style-type: none;
 }
 
 li{
-    display: inline-block;
     margin-right: 30px;
     margin-bottom: 30px;
+    display: inline-block;
 }
 
 
 
 /* Header ===================================================================== */
 header{
-    border: 1px solid var(--header-border-color);
     color: var(--main-font-color);
+    border-bottom: 1px solid var(--header-border-color);
 }
-    header a{
-        display: inline-block;
-    }
+
+/* костыль, убираю борт чтоб небыло светлого просвета между ховер еффектом меню (синяя полоска) и hero блоком*/
+.index-header{
+    border-bottom: 0px; 
+}
+
+    header a{ display: inline-block; }
+
     header li, header a{
-        vertical-align: middle;
-        color: var(--main-font-color);
+        margin-bottom: 0px;
         line-height: 80px;
         font-weight: 700;
-        margin-bottom: 0px;
+        vertical-align: middle;
+        color: var(--main-font-color);
     }
+
     .wrapper-in-header{
         margin:0 auto;
         max-width: var(--max-width);
-        display: inherit;
     }
+    
+        .top .logo{ margin-right: 85px; }
+
         .logo{
             font-family: var(--logo-font-family);
             font-size: 26px;
             color: var(--main-font-color);
             text-decoration: none;
         }
-        .top .logo{
-            margin-right: 85px;
-        }
-            .logo span{
-                color: var(--main-hover-color);
-            }
+
+            .logo span{ color: var(--main-hover-color); }
+
         .top,
         .top-nav-ul,
         .addres-header{
             display: inline-block;
+            font-size: 14px;
         }
+
+            .addres-header a{ color: var(--secondary-font-color); }
+
         .contact li{
             background-repeat: no-repeat;
             background-position: left;
         }
-        .envelope{ /* small icon */
-            padding-left: 25px;
-            background-image: url("../images/envelope.svg");
-        }
-        .phone{ /* small icon */
-            padding-left: 20px;
-            background-image: url("../images/smartphone.svg");
-        }
+
+            .envelope{ /* small icon */
+                padding-left: 25px;
+                background-image: url("../images/envelope.svg");
+            }
+
+            .phone{ /* small icon */
+                padding-left: 20px;
+                background-image: url("../images/smartphone.svg");
+            }
+
+    /*menu hover effect ==================== */
     .active-page,
-    .top-nav-ul a:hover{
+    .top-nav-ul a:hover,
+    .top-nav-ul a:focus{
         color: var(--main-hover-color);
-        border-top: 2px solid var(--main-font-on-dark-fon-color); /* костыль чтоб не прыгало имя ссылки */
-        border-bottom: 2px solid var(--main-hover-color);
+        border-top: 3px solid var(--main-font-on-dark-fon-color); /* костыль, чтоб не прыгало имя ссылки */
+        border-bottom: 3px solid var(--main-hover-color);
     }
-    address a:hover{
-        color: var(--main-hover-color);
-    }
+
+    address a:hover,
+    address a:focus{ color: var(--main-hover-color); }
 
 
 
 /*Footer ===================================================================== */
 footer{
-    background-color: var(--footer-bg-color);
-    color: var(--main-font-on-dark-fon-color);
-    padding: 60px 0;
     margin-top: 63px;
-}
-
-.wrapper-in-footer{
-    margin:0 auto;
-    max-width: var(--max-width);
-    display: inherit;
-}
-.wrapper-in-footer div{
-    margin-bottom: 20px;
-}
-
-footer .logo{
+    padding: 60px 0;
     color: var(--main-font-on-dark-fon-color);
+    background-color: var(--footer-bg-color);
 }
-
-footer div{
-    display: inline-block;
-    vertical-align: top;
-    margin-right: 70px;
-}
-
-.addres-footer ul{
-    margin-top: 20px;
-}
-    .addres-footer ul li{
+    .wrapper-in-footer{
+        margin:20 auto;
+        max-width: var(--max-width);
         display: block;
-        margin-bottom: 9px;
     }
+
+    .wrapper-in-footer > div{
+        margin-bottom: 20px;
+    }
+
+    footer div{
+        margin-right: 70px;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+        footer .logo{ color: var(--main-font-on-dark-fon-color); }
+
+        .addres-footer ul{ margin-top: 20px; }
+
+            .addres-footer ul li{
+                display: block;
+                margin-bottom: 10px;
+            }
     
     .addres-footer ul li a{
-            color: var(--main-font-on-dark-fon-color);
-            font-family: var(--main-font-family);
-            font-style: normal;
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 1.7;
-            color: rgba(255, 255, 255, 0.6);
-        }
+        font-family: var(--main-font-family);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.7;
+        font-size: 14px;
+        color: var(--address-footer-a-color);
+    }
 
 .join ul{
     margin-top: 20px;
@@ -178,6 +183,7 @@ footer div{
 
 .join li{
     margin-right: 10px;
+    margin-bottom: 10px;
 }
 
 
@@ -189,10 +195,12 @@ footer div{
     background-image: url("../images/hero-image.jpg");
     background-position: center;
 }
+
     .wrapper-bg-transparent-in-hero{
         background-color: rgba(47, 48, 58, 0.8);
         height: 100%;
     }
+
     .hero h1{
         padding-top: 200px;
         margin-top: 0px;
@@ -227,8 +235,7 @@ footer div{
 .our-team,
 .clients,
 .wrapper-in-footer,
-.portfolio
-{
+.portfolio{
     margin: 0 auto;
 }
 
@@ -278,6 +285,7 @@ footer div{
             .benefits-list div img{
                 vertical-align: middle;
             }
+
         .benefits-list p{
             font-family: var(--main-font-family);
             font-style: normal;
@@ -340,10 +348,12 @@ footer div{
             0px 1px 3px rgba(0, 0, 0, 0.12);
         border-radius: 0px 0px 4px 4px;
     }
+
         .our-team-member h3{
             margin-top: 30px;
             margin-bottom: 10px;
         }
+
         .our-team-member b{
             font-family: var(--main-font-family);
             font-style: normal;
@@ -360,8 +370,9 @@ footer div{
 
             .social li{
                 line-height: 44px;
-                margin-right: 10px;
                 margin-top: 16px;
+                margin-right: 10px;
+                margin-bottom: 0;
             }
 
 
@@ -382,7 +393,8 @@ footer div{
         margin-bottom: 30px;
     }
     
-    .clients li:hover{
+    .clients li:hover,
+    .clients li:focus{
         border: 1px solid var(--main-hover-color);
     }
 
@@ -391,6 +403,7 @@ footer div{
         background-repeat: no-repeat;
         display:block;
     }
+
         .client1{ background-image: url("../images/clients/client1.svg"); }
         .client2{ background-image: url("../images/clients/client2.svg"); }
         .client3{ background-image: url("../images/clients/client3.svg"); }
@@ -413,6 +426,7 @@ footer div{
 
     .btn-group li{
         margin-right: 8px;
+        margin-bottom: 0px;
     }
 
     .btn-group button{
@@ -427,7 +441,8 @@ footer div{
         letter-spacing: 0.05em;
     }
 
-    .btn-group button:hover{
+    .btn-group button:hover,
+    .btn-group button:focus{
         background-color: var(--main-hover-color);
         color: var(--secondary-bg-color);
         box-shadow:
@@ -444,14 +459,16 @@ footer div{
         display: inline-block;
         width: 370px;
         border: 1px solid var(--portfolio-card-border-color);
+                overflow: hidden;
     }
 
     .ul-portfolio li h2,
-    .ul-portfolio li p{
+    .ul-portfolio li .filter{
         padding-left: 24px;
     }
 
-    .ul-portfolio li:hover{
+    .ul-portfolio li:hover,
+    .ul-portfolio li:focus{
         box-shadow: 1px 4px 6px
         rgba(0, 0, 0, 0.16), 0px 4px 4px
         rgba(0, 0, 0, 0.06), 0px 1px 1px
@@ -464,11 +481,27 @@ footer div{
 
     .ul-portfolio a{
         text-decoration: none;
+        display: inline-block;
+        width: inherit;
     }
 
-    .ul-portfolio img{
-        width: 370px;
+    .ul-portfolio li{
+        height: 404px;
+        background-repeat: no-repeat;
+        background-position: top;
     }
+
+    .project1{ background-image: url("../images/portfolio/project1.jpg"); }
+    .project2{ background-image: url("../images/portfolio/project2.jpg"); }
+    .project3{ background-image: url("../images/portfolio/project3.jpg"); }
+    .project4{ background-image: url("../images/portfolio/project4.jpg"); }
+    .project5{ background-image: url("../images/portfolio/project5.jpg"); }
+    .project6{ background-image: url("../images/portfolio/project6.jpg"); }
+    .project7{ background-image: url("../images/portfolio/project7.jpg"); }
+    .project8{ background-image: url("../images/portfolio/project8.jpg"); }
+    .project9{ background-image: url("../images/portfolio/project9.jpg"); }
+
+    .ul-portfolio div{ vertical-align: bottom; }
 
     .ul-portfolio a h2{
         color: var(--main-font-color);
@@ -490,4 +523,23 @@ footer div{
         font-weight: 400;
         font-size: 14px;
         line-height: 30px;
+    }
+
+    .hover-text span{
+        display: block;
+        margin: 0;
+        padding: 0;
+        padding: 63px 24px;
+    }
+
+    .ul-portfolio .hover-text span{
+        visibility: hidden;
+        background-color: rgba(33, 150, 243, 0.9);
+        color: var(--main-font-on-dark-fon-color);
+        height: 294px;
+    }
+    
+    .ul-portfolio .hover-text:hover span,
+    .ul-portfolio .hover-text:focus span{
+        visibility: visible;
     }
