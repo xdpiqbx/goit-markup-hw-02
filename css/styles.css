@@ -305,11 +305,19 @@ footer{
 
     .what-we-do li{
         width: 370px;
+        height: 294px;
         margin-right: 30px;
         margin-bottom: 30px;
+        background-position: center;
     }
 
+    .what-we-do-li-1{ background-image: url("../images/what-we-do/notebook.jpg"); }
+    .what-we-do-li-2{ background-image: url("../images/what-we-do/smart.jpg"); }
+    .what-we-do-li-3{ background-image: url("../images/what-we-do/mac.jpg"); }
+
         .what-we-do a{
+            margin-top: 224px;
+            display: block;
             color: var(--main-font-on-dark-fon-color);
         }
 
@@ -372,9 +380,20 @@ footer{
                 line-height: 44px;
                 margin-top: 16px;
                 margin-right: 10px;
-                margin-bottom: 0;
+                margin-bottom: 24px;
             }
-
+                .social a,
+                .join a{ /* .join icons in footer */
+                    display: block;
+                    width: 44px;
+                    height: 44px;
+                }
+            
+            .instagram {background-image: url("../images/instagramico.svg");}
+            .twitter {background-image: url("../images/twitterico.svg");}
+            .facebook {background-image: url("../images/facebookico.svg");}
+            .linkedin {background-image: url("../images/linkedinico.svg");}
+            
 
 
 /*in section clients ===================== index.html ================================================*/
