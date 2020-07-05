@@ -24,14 +24,6 @@
 
 
 /* html ===================================================================== */
-html {
-  box-sizing: border-box;
-}
-    *,
-    *::before,
-    *::after { box-sizing: inherit; }
-
-
 
 /* body ===================================================================== */
 body{
@@ -47,47 +39,22 @@ a{ text-decoration: none; }
 
 address{ font-style: normal; }
 
-ul{
-    margin: 0;
-    padding-left: 0;
-    list-style-type: none;
-}
-
-li{
-    margin-right: 30px;
-    margin-bottom: 30px;
-    display: inline-block;
-}
+ul{ list-style-type: none; }
 
 
 
 /* Header ===================================================================== */
 header{
     color: var(--main-font-color);
-    border-bottom: 1px solid var(--header-border-color);
 }
 
-/* костыль, убираю борт чтоб небыло светлого просвета между ховер еффектом меню (синяя полоска) и hero блоком*/
-.index-header{
-    border-bottom: 0px; 
-}
-
-    header a{ display: inline-block; }
 
     header li, header a{
-        margin-bottom: 0px;
         line-height: 80px;
         font-weight: 700;
         vertical-align: middle;
         color: var(--main-font-color);
     }
-
-    .wrapper-in-header{
-        margin:0 auto;
-        max-width: var(--max-width);
-    }
-    
-        .top .logo{ margin-right: 85px; }
 
         .logo{
             font-family: var(--logo-font-family);
@@ -101,7 +68,6 @@ header{
         .top,
         .top-nav-ul,
         .addres-header{
-            display: inline-block;
             font-size: 14px;
         }
 
@@ -113,12 +79,10 @@ header{
         }
 
             .envelope{ /* small icon */
-                padding-left: 25px;
                 background-image: url("../images/envelope.svg");
             }
 
             .phone{ /* small icon */
-                padding-left: 20px;
                 background-image: url("../images/smartphone.svg");
             }
 
@@ -127,45 +91,29 @@ header{
     .top-nav-ul a:hover,
     .top-nav-ul a:focus{
         color: var(--main-hover-color);
-        border-top: 3px solid var(--main-font-on-dark-fon-color); /* костыль, чтоб не прыгало имя ссылки */
-        border-bottom: 3px solid var(--main-hover-color);
     }
 
     address a:hover,
     address a:focus{ color: var(--main-hover-color); }
 
-
-
 /*Footer ===================================================================== */
 footer{
-    margin-top: 63px;
-    padding: 60px 0;
     color: var(--main-font-on-dark-fon-color);
     background-color: var(--footer-bg-color);
 }
     .wrapper-in-footer{
-        margin:20 auto;
         max-width: var(--max-width);
-        display: block;
     }
 
-    .wrapper-in-footer > div{
-        margin-bottom: 20px;
-    }
 
     footer div{
-        margin-right: 70px;
-        display: inline-block;
         vertical-align: top;
     }
 
         footer .logo{ color: var(--main-font-on-dark-fon-color); }
 
-        .addres-footer ul{ margin-top: 20px; }
-
             .addres-footer ul li{
                 display: block;
-                margin-bottom: 10px;
             }
     
     .addres-footer ul li a{
@@ -177,21 +125,10 @@ footer{
         color: var(--address-footer-a-color);
     }
 
-.join ul{
-    margin-top: 20px;
-}
-
-.join li{
-    margin-right: 10px;
-    margin-bottom: 10px;
-}
-
-
 
 /*Main element ===================== index.html ================================================*/
 .hero{
     text-align: center;
-    height: 600px;
     background-image: url("../images/hero-image.jpg");
     background-position: center;
 }
@@ -202,67 +139,42 @@ footer{
     }
 
     .hero h1{
-        padding-top: 200px;
-        margin-top: 0px;
-        margin-bottom: 30px;
         color:var(--main-font-on-dark-fon-color);
         font-family: var(--main-font-family);
         font-style: normal;
         font-weight: 900;
         font-size: 44px;
-        line-height: 60px;
+        line-height: 1.36;
         text-align: center;
         letter-spacing: 0.06em;
         text-transform: uppercase;
     }
 
     .hero button{
-        line-height: 30px;
+        line-height: 1.9;
         background-color: var(--main-hover-color);
         font-family: var(--main-font-family);
         color: var(--secondary-bg-color);
         font-size: 16px;
-        border-radius: 4px;
-        border-style: none;
         font-weight: 700;
-        padding: 10px 32px 10px 32px;
         letter-spacing: 0.06em;
     }
-
-.benefits,
-.what-we-do,
-.wrapper-full-width,
-.our-team,
-.clients,
-.wrapper-in-footer,
-.portfolio{
-    margin: 0 auto;
-}
 
 .wrapper-full-width{
     background-color: var(--secondary-bg-color);
 }
 
 .section-title{
-    padding-top: 94px;
-    margin: 0px;
-    padding-bottom: 50px;
     font-size: 36px;
-    line-height: 42px;
+    line-height: 1.17;
 }
 
 
 
 /*in section benefits ===================== index.html ================================================*/
 .hidden-header-h{
-    margin: 0px;
-    padding: 0px;
-    line-height: 0px;
+    line-height: 0;
     font-size: 0;
-}
-
-.benefits{
-    padding-top: 94px;
 }
 
 .benefits-list{
@@ -272,13 +184,11 @@ footer{
     .benefits-list li{
         width: 270px;
         text-align: left;
-        margin-right: 30px;
     }
 
         .benefits-list div{
             text-align: center;
             background-color: var(--secondary-bg-color);
-            border-radius: 4px;
             line-height: 120px;
         }
 
@@ -291,7 +201,7 @@ footer{
             font-style: normal;
             font-weight: 400;
             font-size: 14px;
-            line-height: 24px;
+            line-height: 1.7;
             color: var(--secondary-font-color);
         }
 
@@ -300,15 +210,13 @@ footer{
 /*in section what-we-do ===================== index.html ================================================*/
 .what-we-do{
     text-align: center;
-    padding-bottom: 94px;
 }
 
     .what-we-do li{
         width: 370px;
         height: 294px;
-        margin-right: 30px;
-        margin-bottom: 30px;
         background-position: center;
+        background-repeat: no-repeat;
     }
 
     .what-we-do-li-1{ background-image: url("../images/what-we-do/notebook.jpg"); }
@@ -316,15 +224,12 @@ footer{
     .what-we-do-li-3{ background-image: url("../images/what-we-do/mac.jpg"); }
 
         .what-we-do a{
-            margin-top: 224px;
-            display: block;
             color: var(--main-font-on-dark-fon-color);
         }
 
             .what-we-do h3{
                 background-color: var(--what-we-do-card-header-bg-color);
                 line-height: 70px;
-                margin: 0;
                 font-family: var(--main-font-family);
                 font-style: normal;
                 font-weight: 600;
@@ -339,49 +244,30 @@ footer{
 /*in section our-team ===================== index.html ================================================*/
 .our-team{
     text-align: center;
-    padding-bottom: 94px;
 }
         
     .our-team-member{
-        display: inline-block;
-        margin-right: 30px;
-        margin-bottom: 30px;
         background-color:var(--member-card-bg-color);
         width: 270px;
-        border-radius: 0px 0px 4px 4px;
         text-align: center;
-        box-shadow: 
-            0px 2px 1px rgba(0, 0, 0, 0.2),
-            0px 1px 1px rgba(0, 0, 0, 0.14),
-            0px 1px 3px rgba(0, 0, 0, 0.12);
-        border-radius: 0px 0px 4px 4px;
     }
-
-        .our-team-member h3{
-            margin-top: 30px;
-            margin-bottom: 10px;
-        }
 
         .our-team-member b{
             font-family: var(--main-font-family);
             font-style: normal;
             font-weight: 400;
             font-size: 16px;
-            line-height: 19px;
+            line-height: 1.9;
             text-align: center;
             color: var(--secondary-font-color);
         }
 
-        .social{
-            padding-left: 0px;
-        }
-
-            .social li{
-                line-height: 44px;
-                margin-top: 16px;
-                margin-right: 10px;
-                margin-bottom: 24px;
+            .social li,
+            .join li{
+                height: 44px;
+                background-repeat: no-repeat;
             }
+
                 .social a,
                 .join a{ /* .join icons in footer */
                     display: block;
@@ -402,19 +288,8 @@ footer{
 }
 
     .clients li{
-        display: inline-block;
         width: 170px;
         line-height: 90px;
-        border: 1px solid var(--clients-border-color);
-
-        border-radius: 4px;
-        margin-right: 30px;
-        margin-bottom: 30px;
-    }
-    
-    .clients li:hover,
-    .clients li:focus{
-        border: 1px solid var(--main-hover-color);
     }
 
     .clients a{
@@ -439,24 +314,14 @@ footer{
 
     .btn-group{
         text-align: center;
-        padding-top: 93px;
-        margin-bottom: 50px;
-    }
-
-    .btn-group li{
-        margin-right: 8px;
-        margin-bottom: 0px;
     }
 
     .btn-group button{
-        margin-bottom: 2px;
-        line-height: 26px;
+        font-size: 16px;
+        line-height: 1.6;
         background-color: var(--secondary-bg-color);
         font-family: var(--main-font-family);
-        border-radius: 4px;
-        border-style: none;
         font-weight: 700;
-        padding: 6px 22px 6px 22px;
         letter-spacing: 0.05em;
     }
 
@@ -464,10 +329,6 @@ footer{
     .btn-group button:focus{
         background-color: var(--main-hover-color);
         color: var(--secondary-bg-color);
-        box-shadow:
-            0px 2px 2px rgba(0, 0, 0, 0.12),
-            0px 1px 2px rgba(0, 0, 0, 0.08),
-            0px 3px 1px rgba(0, 0, 0, 0.1);
     }
 
     .ul-portfolio{
@@ -475,23 +336,8 @@ footer{
     }
 
     .ul-portfolio li{
-        display: inline-block;
         width: 370px;
-        border: 1px solid var(--portfolio-card-border-color);
-                overflow: hidden;
-    }
-
-    .ul-portfolio li h2,
-    .ul-portfolio li .filter{
-        padding-left: 24px;
-    }
-
-    .ul-portfolio li:hover,
-    .ul-portfolio li:focus{
-        box-shadow: 1px 4px 6px
-        rgba(0, 0, 0, 0.16), 0px 4px 4px
-        rgba(0, 0, 0, 0.06), 0px 1px 1px
-        rgba(0, 0, 0, 0.12);
+        overflow: hidden;
     }
 
     .ul-portfolio li h2, .ul-portfolio li p{
@@ -500,7 +346,6 @@ footer{
 
     .ul-portfolio a{
         text-decoration: none;
-        display: inline-block;
         width: inherit;
     }
 
@@ -524,37 +369,29 @@ footer{
 
     .ul-portfolio a h2{
         color: var(--main-font-color);
-        margin-top: 20px;
-        margin-bottom: 4px;
         font-family: var(--main-font-family);
         font-style: normal;
         font-weight: 700;
         font-size: 16px;
-        line-height: 36px;
+        line-height: 2.25;
         letter-spacing: 0.06em;
     }
 
     .ul-portfolio p{
         color: var(--secondary-font-color);
-        margin-top: 0px;
         font-family: var(--main-font-family);
         font-style: normal;
         font-weight: 400;
         font-size: 14px;
-        line-height: 30px;
+        line-height: 2.14;
     }
 
     .hover-text span{
         display: block;
-        margin: 0;
-        padding: 0;
-        padding: 63px 24px;
     }
 
     .ul-portfolio .hover-text span{
         visibility: hidden;
-        background-color: rgba(33, 150, 243, 0.9);
-        color: var(--main-font-on-dark-fon-color);
         height: 294px;
     }
     
