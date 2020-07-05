@@ -50,7 +50,6 @@ header{
 
 
     header li, header a{
-        line-height: 80px;
         font-weight: 700;
         vertical-align: middle;
         color: var(--main-font-color);
@@ -208,36 +207,20 @@ footer{
 
 
 /*in section what-we-do ===================== index.html ================================================*/
-.what-we-do{
-    text-align: center;
+.what-we-do a{
+    color: var(--main-font-on-dark-fon-color);
 }
 
-    .what-we-do li{
-        width: 370px;
-        height: 294px;
-        background-position: center;
-        background-repeat: no-repeat;
+    .what-we-do h3{
+        background-color: var(--what-we-do-card-header-bg-color);
+        line-height: 70px;
+        font-family: var(--main-font-family);
+        font-weight: 600;
+        font-size: 14px;
+        text-align: center;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
     }
-
-    .what-we-do-li-1{ background-image: url("../images/what-we-do/notebook.jpg"); }
-    .what-we-do-li-2{ background-image: url("../images/what-we-do/smart.jpg"); }
-    .what-we-do-li-3{ background-image: url("../images/what-we-do/mac.jpg"); }
-
-        .what-we-do a{
-            color: var(--main-font-on-dark-fon-color);
-        }
-
-            .what-we-do h3{
-                background-color: var(--what-we-do-card-header-bg-color);
-                line-height: 70px;
-                font-family: var(--main-font-family);
-                font-style: normal;
-                font-weight: 600;
-                font-size: 14px;
-                text-align: center;
-                letter-spacing: 0.1em;
-                text-transform: uppercase;
-            }
 
 
 
@@ -316,86 +299,58 @@ footer{
         text-align: center;
     }
 
-    .btn-group button{
-        font-size: 16px;
-        line-height: 1.6;
-        background-color: var(--secondary-bg-color);
-        font-family: var(--main-font-family);
-        font-weight: 700;
-        letter-spacing: 0.05em;
-    }
+        .btn-group button{
+            font-size: 16px;
+            line-height: 1.6;
+            background-color: var(--secondary-bg-color);
+            font-family: var(--main-font-family);
+            font-weight: 700;
+            letter-spacing: 0.05em;
+        }
 
-    .btn-group button:hover,
-    .btn-group button:focus{
-        background-color: var(--main-hover-color);
-        color: var(--secondary-bg-color);
-    }
+        .btn-group button:hover,
+        .btn-group button:focus{
+            background-color: var(--main-hover-color);
+            color: var(--secondary-bg-color);
+        }
 
     .ul-portfolio{
         text-align: center;
     }
 
-    .ul-portfolio li{
-        width: 370px;
-        overflow: hidden;
-    }
+        .ul-portfolio li{
+            width: 370px;
+            overflow: hidden;
+        }
+        
+        .ul-portfolio a{
+            text-decoration: none;
+            width: inherit;
+        }
+            .ul-portfolio li h2,
+            .ul-portfolio li p{
+                text-align: left;
+            } 
 
-    .ul-portfolio li h2, .ul-portfolio li p{
-        text-align: left;
-    } 
+        .ul-portfolio a h2{
+            color: var(--main-font-color);
+            font-family: var(--main-font-family);
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 2.25;
+            letter-spacing: 0.06em;
+        }
 
-    .ul-portfolio a{
-        text-decoration: none;
-        width: inherit;
-    }
+        .ul-portfolio p{
+            color: var(--secondary-font-color);
+            font-family: var(--main-font-family);
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 2.14;
+        }
 
-    .ul-portfolio li{
-        height: 404px;
-        background-repeat: no-repeat;
-        background-position: top;
-    }
-
-    .project1{ background-image: url("../images/portfolio/project1.jpg"); }
-    .project2{ background-image: url("../images/portfolio/project2.jpg"); }
-    .project3{ background-image: url("../images/portfolio/project3.jpg"); }
-    .project4{ background-image: url("../images/portfolio/project4.jpg"); }
-    .project5{ background-image: url("../images/portfolio/project5.jpg"); }
-    .project6{ background-image: url("../images/portfolio/project6.jpg"); }
-    .project7{ background-image: url("../images/portfolio/project7.jpg"); }
-    .project8{ background-image: url("../images/portfolio/project8.jpg"); }
-    .project9{ background-image: url("../images/portfolio/project9.jpg"); }
-
-    .ul-portfolio div{ vertical-align: bottom; }
-
-    .ul-portfolio a h2{
-        color: var(--main-font-color);
-        font-family: var(--main-font-family);
-        font-style: normal;
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 2.25;
-        letter-spacing: 0.06em;
-    }
-
-    .ul-portfolio p{
-        color: var(--secondary-font-color);
-        font-family: var(--main-font-family);
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 2.14;
-    }
-
-    .hover-text span{
-        display: block;
-    }
-
-    .ul-portfolio .hover-text span{
-        visibility: hidden;
-        height: 294px;
-    }
-    
-    .ul-portfolio .hover-text:hover span,
-    .ul-portfolio .hover-text:focus span{
-        visibility: visible;
-    }
+        .ul-portfolio .hover-text{
+            visibility: hidden;
+        }
