@@ -23,8 +23,6 @@
 
 
 
-/* html ===================================================================== */
-
 /* body ===================================================================== */
 body{
     font-family: var(--main-font-family);
@@ -103,7 +101,6 @@ footer{
     .wrapper-in-footer{
         max-width: var(--max-width);
     }
-
 
     footer div{
         vertical-align: top;
